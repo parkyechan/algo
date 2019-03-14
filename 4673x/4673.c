@@ -1,14 +1,16 @@
 #include<stdio.h>
-int selfnum(int a){
-  if(a/10 < 1){
-    a = a + a;
-    printf("%d\n", a);
+int self(int a){
+  int t = 1, sum = 0;
+  while(t != 0){
+    sum += t;
+    t = a % 10;
+    a = a / 10;
   }
-  return a;
+  return sum - 1;
 }
 int main(){
-  int N = 1;
-  while(N<100){
-    N = selfnum(N);
-  }
+  int N, res;
+  scanf("%d", &N);
+  res = self(N);
+  printf("%s\n", );
 }
