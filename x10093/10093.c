@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-  long long a, b;
+  unsigned long long a, b;
   scanf("%llu %llu", &a, &b);
   if(a != b)
     printf("%.llu\n", b - a -1);
