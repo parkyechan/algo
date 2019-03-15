@@ -10,7 +10,6 @@ int main(){
   }
   for(int i=0; i<2; i++){
     for(int j=1; j<=6; j++){
-        arr[0][j]++;
       while(arr[i][j] > M){
         arr[i][j] = arr[i][j] /M + arr[i][j]%M;
         sum++;
