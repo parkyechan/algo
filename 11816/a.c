@@ -3,7 +3,7 @@
 #include<string.h>
 int main(){
   int res;
-  int sixteen = 1, sixsum = 0;
+  int sixteen = 1, sixsum = 0, eight = 1, eightsum = 0;
   char *arr = (char *)malloc(sizeof(char));
   scanf("%s", arr);
   if(arr[1] == 'x'){
@@ -18,12 +18,15 @@ int main(){
         sixteen *= 16;
       }
     }
+    printf("%d", sixsum);
   }
   else if(arr[0] == '0' && arr[1] != 'x'){
-    for(int i=1; i<strlen(arr); i++)
-      printf("%c", arr[i]);
+    for(int i=strlen(arr)-1; i>0; i--){
+      eightsum += (arr[i]-48) * eight;
+      eight *= 8;
+    }
+    printf("%d", eightsum);
   }
   else
     printf("%s", arr);
-  printf("%d", sixsum);
 }
