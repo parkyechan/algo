@@ -15,6 +15,6 @@ int main(){
       }
     }
   }
-  printf("%d", max);
-  printf("%d %d", jsave+1, isave+1);
+  printf("%d\n", max);
+  printf("%d %d", isave+1, jsave+1);
 }
