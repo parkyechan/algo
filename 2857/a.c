@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-  char arr[10] = {0, 0, 0, 0, 0};
+  char arr[15] = {0, 0, 0, 0, 0};
   int save[5] = {0, 0, 0, 0, 0};
   int cnt = 0;
   for(int i=0; i<5; i++){
