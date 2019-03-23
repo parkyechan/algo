@@ -7,7 +7,6 @@ int main(){
     if(a==0 && b ==0 && arr[0] == 'W') break;
     if(arr[0] == 'D') res = a + b;
     else if(arr[0] =='W') res = a - b;
-    // if(arr[0] == 'W' && b < -200) printf("Not allowed\n");
     if(res < -200) printf("Not allowed\n");
     else printf("%d\n", res);
   }
