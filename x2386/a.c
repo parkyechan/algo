@@ -3,7 +3,7 @@
 int main(){
   int cnt = 0, cnt2 = 0;
   while(1){
-    char arr[1001] = {};
+    char arr[1001] = {}, t;
     int j = 0;
     while(1){
       arr[j] = getchar();
@@ -13,8 +13,11 @@ int main(){
     }
     cnt2 = j;
     j = 0;
+    t = arr[0];
     while(cnt2 > 0){
-      if(arr[j] < 97) arr[j] += 32;
+      if(arr[j] < 97) {
+        arr[j] += 32;
+      }
       j++;
       cnt2--;
     }
@@ -23,7 +26,7 @@ int main(){
         cnt++;
       }
     }
-    printf("%d\n", cnt);
+    printf("%c %d\n", t, cnt);
     cnt = 0;
   }
 }
