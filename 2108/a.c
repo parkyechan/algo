@@ -23,15 +23,6 @@ int main()
   }
   for(int i = 0; i<100001; i++)
   {
-    a += arr[i];
-    if(arr[i] > 0)
-      c[arr[i]]++;
-    else{
-      e[(-1)*arr[i]]++;
-    }
-  }
-  for(int i = 0; i<100001; i++)
-  {
     if(c[i] > max) max = arr[i];
     if(e[i] > max) max = arr[i];
   }

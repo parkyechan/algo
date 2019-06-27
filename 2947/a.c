@@ -6,7 +6,7 @@ int main(){
   }
   while(1){
     for(int i=0; i<5; i++){
-      for(int j=i; j<4; j++){
+      for(int j=0; j<4; j++){
         if(arr[j] > arr[j+1]){
           tmp = arr[j+1];
           arr[j+1] = arr[j];
@@ -22,5 +22,6 @@ int main(){
       if(arr[i] == i+1) cnt++;
     }
     if(cnt == 5) break;
+    cnt = 0;
   }
 }
