@@ -5,10 +5,8 @@ main(){
     scanf("%d", &arr[i]);
   }
   for(int i=1; i<=N; i++){
-    for(int k=1; k<i; k++)
-      sum += new[k];
+    sum += new[i-1];
     new[i] = arr[i] * i - sum;
-    sum = 0;
     printf("%d ", new[i]);
   }
 }
