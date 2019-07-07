@@ -1,13 +1,16 @@
-#include<stdio.h>
-int main(){
-  int a, sum = 1, j;
-  scanf("%d", &a);
-  for(int i = 1; i<=a; i++){
-    if(a > sum) sum = i
-    else{
+main(){
+  int N, sum = 0, cnt = 0, j = 1, flag = 0;
+  scanf("%d", &sum);
+  while(1){
+    if(sum == 0) break;
+    flag = 1;
+    if(j > sum){
       j = 1;
-      sum = j;
-      j++;
+      continue;
+    }else{
+      sum -= j++;
     }
+    cnt++;
   }
+  printf("%d", cnt);
 }

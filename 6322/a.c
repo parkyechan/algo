@@ -9,20 +9,20 @@ int main(){
     if(a == -1){
       i++;
       printf("Triangle #%d\n", i);
-      if(c * c - b * b < 0){
+      res = sqrt(c * c - b * b);
+      if(c * c - b * b < 0 || res == 0){
         printf("Impossible.\n\n");
         continue;
       }
-      res = sqrt(c * c - b * b);
       printf("a = %.3lf\n\n", res);
     }else if(b == -1){
       i++;
       printf("Triangle #%d\n", i);
-      if(c * c - a * a < 0){
+      res = sqrt(c * c - a * a);
+      if(c * c - a * a < 0 || res == 00){
         printf("Impossible.\n\n");
         continue;
       }
-      res = sqrt(c * c - a * a);
       printf("b = %.3lf\n\n", res);
     }else if(c == -1){
       i++;
