@@ -1,21 +1,25 @@
 main(){
-  unsigned long long a, b, cnt;
-  scanf("%llu %llu", &a, &b);
-  if(a > b){
-    cnt = a;
-    a = b;
-    b = cnt;
-  }
-  if(a == b){
-    printf("0");
-  }else{
-    printf("%llu\n", b - a - 1);
-    if((b-a) == 1 || (a-b) == 1){
-
-    }
-    else{
-      for(unsigned long long i = a + 1; i < b; i++){
-        printf("%llu ", i);
+  while(1){
+    int N, sum = 0, tmp;
+    scanf("%d", &N);
+    if(N == 0) break;
+    if(N < 10){
+      printf("%d\n", N);
+    }else{
+      while(1){
+        if(N / 10 == 0){
+          printf("%d\n", sum);
+          break;
+        }
+        sum = 0;
+        tmp = N;
+        while(1){
+          sum += tmp % 10;
+          // printf("sum%d\n", sum);
+          tmp /= 10;
+          if(tmp == 0) break;
+        }
+        N = sum;
       }
     }
   }
