@@ -1,32 +1,17 @@
-#include<stdio.h>
-#include<string.h>
-int main(){
-  int cnt = 0, cnt2 = 0;
+main(){
   while(1){
-    char arr[1001] = {}, t;
-    int j = 0;
+    char arr[1001] = {};
+    int i = 0, cnt = 0;
     while(1){
-      arr[j] = getchar();
-      if(arr[j] == '\n') break;
-      if(arr[j] =='#') return 0;
-      j++;
+    if(arr[i-1] == '\n') break;
+      arr[i++] = getchar();
     }
-    cnt2 = j;
-    j = 0;
-    t = arr[0];
-    while(cnt2 > 0){
-      if(arr[j] < 97) {
-        arr[j] += 32;
-      }
-      j++;
-      cnt2--;
+    if(arr[0] == '#') break;
+    for(int k=2; k<i; k++){
+      if(arr[0] == arr[k]) cnt++;
+      else if(arr[0] == arr[k] + 32) cnt++;
+      else if(arr[0] == arr[k] - 32) cnt++;
     }
-    for(int i=2; i<=strlen(arr); i++){
-      if(arr[i] == arr[0]){
-        cnt++;
-      }
-    }
-    printf("%c %d\n", t, cnt);
-    cnt = 0;
+    printf("%c %d\n", arr[0], cnt);
   }
 }
