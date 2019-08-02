@@ -1,5 +1,5 @@
 main(){
-  int arr1[1001] = {}, arr2[1001] = {}, arr3[1001] = {}, a= 0;
+  int arr1[1001] = {}, arr2[1001] = {}, arr3[1001] = {};
   int N, tmp = 0, sum = 0;
   scanf("%d", &N);
   for(int i=0; i<N; i++){
