@@ -1,22 +1,28 @@
-#include<stdio.h>
-#include<string.h>
-int main(){
-  int N, cnt = 0, cnt2 = 0;
-  char arr[1005] = {}, t;
+main(){
+  int N;
+  char dd;
   scanf("%d", &N);
-  t = getchar();
+  dd = getchar();
   for(int i=0; i<N; i++){
-    for(int j=0; j<1001; j++){
-      arr[j] = getchar();
-      if(arr[j] == '\n') break;
+    char arr[1002] = {}, alpa[26] = {};
+    int cnt = 0, res_cnt = 0, moum = 0, m2 = 0, ab = 0;
+    while(1){
+      arr[cnt++] = getchar();
+      if(arr[cnt-1] == '\n') break;
     }
-    for(int j=0; j<strlen(arr); j++){
-      if(arr[j] == 'a' || arr[j] == 'e' || arr[j] == 'i' || arr[j] == 'o' || arr[j] == 'u') cnt++;
-      else if(arr[j] == 'A' || arr[j] == 'E' || arr[j] == 'I' || arr[j] == 'O' || arr[j] == 'U') cnt++;
-      else if(arr[j] != ' '&&arr[j] !='\n') cnt2++;
+    for(int j=0; j<cnt; j++){
+      if(arr[j] > 96) arr[j]-= 97;
+      else arr[j] -= 65;
+      alpa[arr[j]]++;
     }
-    printf("%d %d\n", cnt2, cnt);
-    cnt = 0;
-    cnt2 = 0;
+    for(int j=0; j<26; j++){
+      ab += alpa[j];
+      if(alpa[j] > 0) res_cnt++;
+      if(j == 0 || j == 4 || j == 8 || j == 14 || j == 20){
+        if(alpa[j] > 0) m2++;
+        moum += alpa[j];
+      }
+    }
+    printf("%d %d\n", ab-moum, moum);
   }
 }
