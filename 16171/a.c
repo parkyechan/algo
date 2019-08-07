@@ -1,70 +1,36 @@
-#include<stdio.h>
-int main(){
-  int i = 0, cnt, k = 0, j = 0;
-  char arr1[1001] = {}, arr2[1001] = {};
-  scanf("%s", arr1);
-  scanf("%s", arr2);
-  while(1){
-    if(arr1[j++] == '\0') break;
+main(){
+  int cnt = 0, cnt1 = 0, res_cnt = 0, flag = 0, pres = 0;
+  char arr[1001] = {}, str[1001] = {}, tmp[1001] = {};
+  scanf("%s", arr);
+  scanf("%s", str);
+  while(1) if(arr[cnt++] == '\0') break;
+  for(int i=0; i<cnt; i++){
+    if(arr[i] > 57){
+      // for(int j=i; j<cnt; j++){
+        tmp[pres++] = arr[i];
+      // }
+    }
   }
-  while(1){
-    if(i == j) break;
-    if(arr1[i] == '1'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '2'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '3'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '4'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '5'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '6'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '7'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '8'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
-      }
-    }else if(arr1[i] == '9'){
-      while(1){
-        k = i;
-        if(arr1[k] == '\0') break;
-        arr1[k] = arr1[k+1];
+  cnt = 0;
+  // printf("%d ", pres);
+  // printf("%s\n", tmp);
+  while(1) if(str[cnt1++] == '\0') break;
+  cnt1 -= 1;
+  // printf("%d\n", cnt1);
+  for(int i=0; i<=pres - cnt1; i++){
+    if(res_cnt == cnt1) break;
+    for(int j=0; j<cnt1; j++){
+      // printf("%c %c %d\n", tmp[j], str[j], res_cnt);
+      if(tmp[j + i] == str[j]){
+        res_cnt++;
+      }else{
+        res_cnt = 0;
+        break;
       }
     }
-    i++;
   }
-  printf("%s", arr1);
+  if(res_cnt == cnt1) flag++;
+  // printf("%d %d %d\n", cnt, cnt1, res_cnt);
+  if(flag > 0) printf("1");
+  else printf("0");
 }

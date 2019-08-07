@@ -1,29 +1,27 @@
 main(){
-  int N, arr[10] = {}, tmp, cnt = 0, num[10] = {}, cnt2 = 0, cntreal = 0, tmpreal;
-  scanf("%d", &N);
-  tmpreal = N;
-  while(1){
-    if(tmpreal == 0) break;
-    tmpreal /= 10;
-    cntreal++;
-  }
-  while(1){
-    printf("hi");
-    N--;
-    tmp = N;
+  int a, tmp, cnt = 0, div = 0, res_cnt = 0, res = 0;
+  scanf("%d", &a);
+  for(int i=a; i>0; i--){
+    tmp = i;
+    div = tmp;
     while(1){
       if(tmp == 0) break;
-      arr[cnt++] = tmp % 10;
+
       tmp /= 10;
+      cnt++;
     }
-    for(int i=0; i<cnt; i++){
-      if(arr[i] == 4 || arr[i] == 7)
-        cnt2++;
+    // printf("%d\n", cnt);
+    for(int k=0; k<cnt; k++){
+      if((div%10) == 4 || (div%10) == 7) res_cnt++;
+      // printf("%d %d\n", div, res_cnt);
+      div /= 10;
     }
+    if(res_cnt == cnt){
+      res = i;
+      break;
+    }
+    res_cnt = 0;
+    cnt = 0;
   }
-  if(cntreal == cnt2){
-    for(int i=0; i<cntreal; i++){
-      printf("%d", arr[i]);
-    }
-  }
+  printf("%d", res);
 }
