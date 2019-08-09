@@ -4,6 +4,7 @@ int main(){
   int cnt = 0, sum = 0, flag = 0;
   char arr[1001] = {};
   scanf("%s", arr);
+  // scanf("%d", &sum);
   while(1){
     if(arr[cnt++] == '\0') break;
   }
@@ -19,10 +20,6 @@ int main(){
   }
   for(int i=2; i<=sqrt(sum); i++){
     if(sum % i == 0) flag = 1;
-  }
-  if(sum == 1){
-    printf("It is a not prime word.");
-    return 0;
   }
   // printf("sum : %d\n", sum);
   if(flag == 1) printf("It is a not prime word.");
