@@ -1,12 +1,21 @@
-#include<stdio.h>
-int main(){
-  int arr[10] ={}, res;
-  scanf("%d", arr);
-  if(arr[1] == 0 && arr[3] != 0 && arr[2] != 1 && arr[0] == 1){
-    res = arr[0] * 10 + arr[2];
-  } else if(arr[1] == 0 && arr[3] == 0 && arr[2] == 1 && arr[0] == 1){
-    res = arr[0] * 10 + arr[1] * 10;
+main(){
+  int a, tmp, cnt = 0, flag, r1, r2 = 0, ten = 1;
+  scanf("%d", &a);
+  tmp = a;
+  while(1){
+    if(tmp == 0) break;
+    tmp /= 10;
+    if(tmp % 10 == 0) flag = cnt;
+    cnt++;
   }
-  else res = arr[0] + arr[1];
-  printf("%d", arr[0]);
+  tmp = a;
+  for(int i=0; i<=flag; i++){
+    r2 += (tmp % 10)* ten;
+    tmp /= 10;
+    ten *= 10;
+  }
+  tmp = a;
+  for(int i=0; i<flag; i++) tmp /= 10;
+  printf("tmp : %d\n", tmp);
+  printf("%d", r2);
 }
