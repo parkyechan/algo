@@ -3,7 +3,7 @@ main(){
   int N, tmp = 0, sum = 0;
   scanf("%d", &N);
   for(int i=0; i<N; i++){
-    scanf("%d", &arr1[i]);//
+    scanf("%d", &arr1[i]);// //
   }
   for(int i=0; i<N; i++){
     scanf("%d", &arr2[i]);
