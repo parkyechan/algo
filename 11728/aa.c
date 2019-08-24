@@ -11,7 +11,7 @@ main(){
   // for(int i=0; i<a+b; i++)
   int tmp;
   for(int i=0; i<a+b; i++){
-    for(int j=i; j<a+b-1; j++){
+    for(int j=0; j<a+b-1; j++){
       if(arr3[j] > arr3[j+1]){
         tmp = arr3[j];
         arr3[j] = arr3[j+1];
