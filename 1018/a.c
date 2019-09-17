@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int main(){
   int a, b, min = 210000000;
   char arr[1001][1001] = {};
