@@ -1,4 +1,5 @@
 main(){
+
   char *arr = (char *)malloc(sizeof(char) * 1001);
   int N;
   scanf("%d", &N);

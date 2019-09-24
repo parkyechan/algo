@@ -1,4 +1,5 @@
 main(){
+
   int a, b, c, i = 1;
   scanf("%d %d %d", &a, &b, &c);
   if(a != 0){
