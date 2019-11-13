@@ -8,5 +8,6 @@ main(){
     int min =  sum / 60;
     int sec = sum % 60;
     printf("%d %d\n", min, sec);
-  } 
+  }
 }
+ 
