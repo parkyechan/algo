@@ -1,0 +1,10 @@
+main(){
+  printf("2992\n");
+  printf("2993\n");
+  printf("2994\n");
+  printf("2995\n");
+  printf("2996\n");
+  printf("2997\n");
+  printf("2998\n");
+  printf("2999\n");
+}
