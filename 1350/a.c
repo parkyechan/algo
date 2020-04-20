@@ -5,12 +5,14 @@ main(){
   scanf("%d", &N);
   for(int i=0; i<N; i++) scanf("%lld", &arr[i]);
   scanf("%lld", &siz);
+  long long cnt = 0;
   for(int i=0; i<N; i++){
-    if(arr[i] / siz > 0){
-      sum += (arr[i] / siz + 1) * siz;
-    }else if(arr[i] > 0){
-      sum += siz;
+    if(arr[i] > 0 && arr[i] <= siz) cnt++;
+    else if(arr[i] >= siz){
+      if(arr[i] % siz == 0) cnt += arr[i] / siz;
+      else cnt += (arr[i] / siz) + 1;
     }
   }
+  sum = siz * cnt;
   printf("%lld", sum);
 }
